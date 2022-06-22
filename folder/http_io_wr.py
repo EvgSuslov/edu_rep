@@ -11,8 +11,11 @@ print(g.status_code)
 
 import requests
 from requests.exceptions import HTTPError
- 
-for url in ['https://api.github.com', 'https://api.github.com/invalid']:
+
+rand_url = []
+rand_url.append(input()) 
+
+for url in rand_url:
     try:
         response = requests.get(url)
  
@@ -24,3 +27,7 @@ for url in ['https://api.github.com', 'https://api.github.com/invalid']:
         print(f'Other error occurred: {err}')  # Python 3.6
     else:
         print('Success!')
+       # url = str(rand_url)
+        #r = requests.get(url)
+        #with open('test.html', 'w') as output_file:
+         #   output_file.write(r.text.encode('cp1251'))
