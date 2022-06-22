@@ -13,7 +13,7 @@ import requests
 from requests.exceptions import HTTPError
 
 rand_url = []
-rand_url.append(input()) 
+rand_url.append(input('input url:\n')) 
 
 for url in rand_url:
     try:
@@ -25,9 +25,10 @@ for url in rand_url:
         print(f'HTTP error occurred: {http_err}')  # Python 3.6
     except Exception as err:
         print(f'Other error occurred: {err}')  # Python 3.6
+    except url.status_code == 404 as err404:
+        print(f'Not Found.: {err404}')
     else:
         print('Success!')
-       # url = str(rand_url)
-        #r = requests.get(url)
-        #with open('test.html', 'w') as output_file:
-         #   output_file.write(r.text.encode('cp1251'))
+        
+#with open('test.html', 'w') as output_file:
+#output_file.write(r.text.encode('cp1251'))
