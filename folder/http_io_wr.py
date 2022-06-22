@@ -1,19 +1,12 @@
-"""
-import requests
-#get we can include in var
-g = requests.get('https://api.github.com')
-if g.status_code == 200:
-    print('Success!')
-elif g.status_code == 404:
-    print('Not Found.')
-print(g.status_code)
-"""
-
 import requests
 from requests.exceptions import HTTPError
+import pandas as pd
 
 rand_url = []
 rand_url.append(input('input url:\n')) 
+tables = pd.read_html(str(rand_url))
+print(tables[0])
+
 
 for url in rand_url:
     try:
@@ -30,5 +23,3 @@ for url in rand_url:
     else:
         print('Success!')
         
-#with open('test.html', 'w') as output_file:
-#output_file.write(r.text.encode('cp1251'))
