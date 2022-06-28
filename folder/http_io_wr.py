@@ -10,8 +10,7 @@ print(tables[0])
 
 for url in rand_url:
     try:
-        response = requests.get(url)
- 
+        response = requests.get(url) 
         # если ответ успешен, исключения задействованы не будут
         response.raise_for_status()
     except HTTPError as http_err:
