@@ -1,7 +1,7 @@
 #jsons
 import json
 """
-need ot be fixed
+need to be fixed
 data =  '{  "firstName": "Jane",
             "lastName": "Doe",
             "hobbies": ["running", "sky diving", "singing"],
